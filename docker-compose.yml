@@ -19,7 +19,6 @@ services:
     container_name: zabbix-server
     image: zabbix/zabbix-server-mysql:ubuntu-5.0.1
     networks:
-      - 168.228.176.17/32
       - vpcstack
     restart: always
     ports:
@@ -38,7 +37,6 @@ services:
     container_name: zabbix-frontend
     image: zabbix/zabbix-web-apache-mysql:ubuntu-5.0.1
     networks:
-      - 168.228.176.17/32
       - vpcstack
     restart: always
     ports:
@@ -57,7 +55,6 @@ services:
     image: zabbix/zabbix-agent:ubuntu-5.0-latest
     container_name: zabbix_agent
     networks: 
-      - 168.228.176.17/32
       - vpcstack
     ports:
       - "10050:10050"
@@ -112,7 +109,6 @@ services:
     ports:
     - 6379:6379
     networks:
-    - 168.228.176.17/32
     - vpcstack
 
 volumes:
