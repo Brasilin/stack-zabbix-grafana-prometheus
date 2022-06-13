@@ -4,7 +4,6 @@ services:
     container_name: mysql
     image: mysql:5.7
     networks:
-      - 168.228.176.17/32
       - vpcstack
     ports:
       - '3306:3306'
